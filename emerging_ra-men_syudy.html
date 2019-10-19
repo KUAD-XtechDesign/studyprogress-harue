@@ -13,7 +13,7 @@
     <h2 class="subtitle">手書きでオリジナルラーメンを作ろう！</h2>
     <div class="columns is-centered">
       <div class="column is-narrow">
-        <canvas id="draw-area" width="280" height="280" style="border: 2px solid;"></canvas>
+        <canvas id="draw-area" width="400" height="400" style="border: 2px solid;"></canvas>
         <div class="field is-grouped">
           <p class="control">
             <a id="predict-button" class="button is-link is-loading" onclick="prediction()">
@@ -86,7 +86,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
   <script>
 
-    // init SignaturePad
+    // init SignaturePad　文字描けるようにするやつ
     const drawElement = document.getElementById('draw-area');
     const signaturePad = new SignaturePad(drawElement, {
        minWidth: 6,
