@@ -89,8 +89,8 @@
     // init SignaturePad　文字描けるようにするやつ
     const drawElement = document.getElementById('draw-area');
     const signaturePad = new SignaturePad(drawElement, {
-       minWidth: 6,
-       maxWidth: 6,
+       minWidth: 5,
+       maxWidth: 5,
        penColor: 'black',
        backgroundColor: 'white',
     });
@@ -106,9 +106,9 @@
         document.getElementById('predict-button').classList.remove('is-loading');
         model = pretrainedModel;
       });
-
+//読み込むイメージの大きさ？
     function getImageData() {
-      const inputWidth = inputHeight = 28;
+      const inputWidth = inputHeight = 40;
 
       // resize
       const tmpCanvas = document.createElement('canvas').getContext('2d');
