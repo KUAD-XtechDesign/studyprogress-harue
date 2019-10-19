@@ -37,25 +37,33 @@
           </thead>
           <tbody>
             <tr>
-              <th>めん</th>
+              <th>たまご</th>
               <td class="accuracy" data-row-index="0">-</td>
             </tr>
             <tr>
-              <th>のり</th>
+              <th>メンマ</th>
               <td class="accuracy" data-row-index="1">-</td>
             </tr>
             <tr>
-              <th>たまご</th>
+              <th>海苔</th>
               <td class="accuracy" data-row-index="2">-</td>
             </tr>
             <tr>
-              <th>メンマ</th>
+              <th>めん</th>
               <td class="accuracy" data-row-index="3">-</td>
             </tr>
             <tr>
-              <th>ねぎ</th>
+              <th>めん</th>
               <td class="accuracy" data-row-index="4">-</td>
             </tr>
+            <tr>
+              <th>めん</th>
+              <td class="accuracy" data-row-index="8">-</td>
+            </tr>
+
+          <div>
+            <img id="image01" src="スクリーンショット 2019-10-19 14.07.14" alt="">
+           </div>
           </tbody>
         </table>
       </div>
@@ -136,7 +144,32 @@
         if (maxAccuracy === rowIndex) {
           el.parentNode.classList.add('is-selected');
         }
-        el.innerText = accuracyScores[rowIndex];
+
+      　 el.innerText = accuracyScores[rowIndex];
+
+      let  elem = document.getElementById("image01");
+
+      switch (maxAccuracy) {
+        case 0:
+          elem.src = "img/winxp.jpg";
+          break;
+        case 1:
+          elem.src = "img/winvista.jpg";
+          break;
+        case 2:
+          elem.src = "img/win7.jpg";
+          break;
+        case 3:
+          elem.src = "img/win8.jpg";
+          break;
+        case 4:
+          elem.src = "img/win10.jpg";
+          break;
+        default:
+          elem.src = "img/win10.jpg";
+          break;
+      }
+    }
       })
     }
 
@@ -148,7 +181,7 @@
         el.innerText = '-';
       })
     }
-    <img src="スクリーンショット 2019-10-19 14.07.14" alt="">
+
 
   </script>
 </body>
