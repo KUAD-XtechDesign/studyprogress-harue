@@ -106,9 +106,9 @@
         document.getElementById('predict-button').classList.remove('is-loading');
         model = pretrainedModel;
       });
-//読み込むイメージの大きさ？
+//読み込むイメージの大きさ？変えると壊れる
     function getImageData() {
-      const inputWidth = inputHeight = 40;
+      const inputWidth = inputHeight = 28;
 
       // resize
       const tmpCanvas = document.createElement('canvas').getContext('2d');
